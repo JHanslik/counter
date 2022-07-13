@@ -5,7 +5,7 @@ class Counter extends React.Component {
         return (
                 <div className="border m-2">
                     <h2>{this.props.count}</h2>
-                    <button className="bg-danger m-2 btn-lg" onClick={this.props.substract}>
+                    <button className="bg-danger m-2 btn-lg" onMouseDown={this.props.substract}>
                         <i class="bi bi-dash-circle-fill"></i>
                     </button>
                         <button className="bg-success m-2 btn-lg" onClick={this.props.increment}>

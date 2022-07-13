@@ -2,7 +2,7 @@ import React from "react";
 import Counter from "./components/Counter";
 import './App.css';
 
-
+let interval
 class App extends React.Component {
 
   constructor() {
@@ -59,9 +59,12 @@ class App extends React.Component {
   handleClickPlus2 = (e) => {
     const countValue1 = this.state.count1
     const countValue2 = this.state.count2
-    this.setState({
+    if (this.state.count2 < 100) {
+      this.setState({
       count2: countValue2 + 1
-    })
+      })
+    }
+    
   }
   render() {
     return (
